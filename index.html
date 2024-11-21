@@ -49,31 +49,66 @@
     .bibtex-section {
       margin-top: 50px;
     }
+    .buttons .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      text-align: center;
+      transition: all 0.3s ease;
+    }  
+    .buttons .button:hover {
+      background-color: #f0f0f0;
+      border-color: #aaa;
+    }
+    .buttons .icon {
+      margin-right: 8px;
+      color: #4A90E2;
+    }
+    .buttons .button.is-light.is-outlined {
+      background: none;
+      border: 1px solid #ddd;
+      box-shadow: none;
+      color: #333;
+    }
+    .buttons .button.is-light.is-outlined:hover {
+      background-color: #e6f7ff;
+      color: #0073e6;
+    }
   </style>
 </head>
 <body>
 
 <section class="hero">
-  <div class="hero-body">
-    <div class="custom-container">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">REPARO: Compositional 3D Assets Generation<br> with Differentiable 3D Layout Alignment</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <span>Anonymous Authors<sup>*</sup></span></div>
+    <div class="hero-body">
+      <div class="custom-container">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="https://reparo-3D.github.io/" target="_blank"><i class="fas fa-code"></i>Code (Coming soon)</a>
+            <h1 class="title is-1 publication-title">REPARO: Compositional 3D Assets Generation with Differentiable 3D Layout Alignment</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <span>Anonymous Authors<sup>*</sup></span>
               </span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links" style="margin-top: 20px;">
+                <div class="button-group" style="text-align: center;">
+                  <!-- Paper Button -->
+                  <a class="button is-dark is-rounded" href="https://reparo-3d.github.io/" target="_blank">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code(coming soon)</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 <!-- Abstract Section -->
 <section class="section">
@@ -86,15 +121,11 @@
             This paper presents <strong>REPARO</strong>, an innovative approach designed to address the challenges of 
             compositional 3D assets generation from single images. Traditional image-to-3D models 
             often struggle with scenes containing multiple objects due to biases and occlusion complexities. 
-          </p>
-          <p style="font-size: 1.3em;">
             To address this challenge, we present <strong>REPARO</strong>, a novel approach for compositional 3D asset 
             generation from single images. <strong>REPARO</strong> employs a two-step process: first, it extracts 
             individual objects from the scene and reconstructs their 3D meshes using off-the-shelf 
             image-to-3D models; then, it optimizes the layout of these meshes through differentiable 
             rendering techniques, ensuring coherent scene composition. 
-          </p>
-          <p style="font-size: 1.3em;">
             By integrating advanced techniques such as Optimal Transport for layout alignment and 
             high-level semantic integration for contextual coherence, <strong>REPARO</strong> significantly enhances 
             object independence, detail accuracy, and overall scene coherence. Extensive evaluation 
@@ -111,13 +142,12 @@
 
 <!-- Pipeline Section -->
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container" style="max-width: 60%;">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Pipeline</h2>
         <div class="publication-image">
           <img src="./static/images/framework-1.png" alt="Pipeline Image">
-          <img src="./static/images/Pipeline1.jpg" alt="Pipeline Image">
         </div>
       </div>
     </div>
